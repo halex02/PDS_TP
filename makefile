@@ -5,10 +5,16 @@ CFLAGS += -g
 
 .PHONY= clean re
 
-all :
+all : prlimit maccess
+
+prlimit : prlimit.c
+	$(CC) $(CFLAGS) -o prlimit prlimit.c
+
+maccess : maccess.c
+	$(CC) $(CFLAGS) -o maccess maccess.c
 
 clean :
-
-test :
-
+	-rm *~ \#*#
+	-rm *.o
+	-rm prlimit maccess
 re : clean all

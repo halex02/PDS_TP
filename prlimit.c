@@ -3,10 +3,10 @@
 #include <limits.h>
 #include <unistd.h>
 
-int prlimit()
+int main(int argc, char** argv)
 {
-  printf("La valeur de NAME_MAX est : %n.\n", NAME_MAX) ;
-  printf("La valeur de PATH_MAX est : %n.\n", PATH_MAX) ;
+  printf("La valeur de NAME_MAX est : %d.\n", NAME_MAX) ;
+  printf("La valeur de PATH_MAX est : %d.\n", PATH_MAX) ;
 
   return 0 ;
 }
