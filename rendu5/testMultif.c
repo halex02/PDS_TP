@@ -16,6 +16,6 @@ int main (int argc, char* argv[]){
   tabInt[2] = 5 ;
   
   logAnd = multif(tabFunc,tabInt,3) ;  
-  fprintf(stdout, "%d\n", sum) ;
+  fprintf(stdout, "multif a renvoyé : %d\n", sum) ;
   return EXIT_SUCCESS ;
 }
