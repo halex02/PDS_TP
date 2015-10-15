@@ -13,6 +13,9 @@ multifourche.o : multifourche.c multifourche.h
 power.o : power.c power.h
 	$(CC) $(CFLAGS) -c power.c
 
+forkfork.o : forkfork.c forkfork.h
+	$(CC) $(CFLAGS) -c forkfork.c
+
 #la cible main ne sert à rien pour l'instant : pas de programme main à compiler
 main : main.c multifourche.o power.o
 	$(CC) $(CFLAGS) -o main main.c
