@@ -1,0 +1,10 @@
+TP PDS -  TAIL
+Alexandre Houplon
+Antoine Canda
+
+Seul le premier tail est codé.
+Il ne fonctionne pas du fait d'une stupide erreur
+d'inattention dans sa conception :
+il ne compte pas les lignes, mais la complexité en
+nombre d'appel de read, et on ne s'est aperçu de ça
+qu'aujourd'hui (la veille du rendu).

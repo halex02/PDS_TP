@@ -1,0 +1,35 @@
+#define BUFSIZE 1024
+
+#define TAIL_SIMPLE
+
+#ifdef TAIL_SIMPLE
+
+/*
+ */
+int tail(const char *path, int nline) ;
+
+#endif
+
+#ifdef TAIL_RELATIVE
+
+/*
+ */
+int index_tail_buffer(const char *buffer, int bufsize, int ntail, int *nlines);
+
+/*
+ */
+int tail_before_pos(int fd, unsigned int pos, int ntail);
+
+#endif
+
+#ifdef TAIL_EFFICACE
+
+/*
+ */
+int tail(const char *path, int ntail);
+
+#endif
+
+#ifdef TAIL_UTILE
+
+#endif

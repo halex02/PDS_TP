@@ -37,7 +37,7 @@ int main (int argc, char** argv)
   /*
     si on a pas le bon nombre de paramètres sur la ligne de commande, on fait planter le programme.
    */
-  if (argc < 3 && argc > 3)
+  if (argc != 3)
     exit(EXIT_FAILURE) ;
   
   /*
@@ -50,9 +50,6 @@ int main (int argc, char** argv)
   
   param = *(argv+1) ;
   chemin = *(argv+2);
-  printf("%s\n", param) ;
-  printf("%s\n", chemin) ;
-  
   
   /*
     boucle de sélection des modes.
