@@ -50,19 +50,19 @@ int power2(int p) {
     comme ça on peut réutiliser le même nom de variable dans chaque fonction.
     Sans ça je n'ai aucune idée de ce que ça peut faire, sûrement des chocapic.
    */
-  static int i = power(2,p) ;
+  int i = power(2,p) ;
   fprintf(stdout, "2^%d = %d\n", p, i) ;
   return i ;
 }
  
 int power3(int p) {
-  static int i = power(3,p) ;
+  int i = power(3,p) ;
   fprintf(stdout, "3^%d = %d\n", p, i) ;
   return i ;
 }
 
 int power5(int p) {
-  static int i = power(5,p) ;
+  int i = power(5,p) ;
   fprintf(stdout, "5^%d = %d\n", p, i) ;
   return i ;
 }

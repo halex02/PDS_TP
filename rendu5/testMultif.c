@@ -2,7 +2,7 @@
 #include "power.h"
 
 int main (int argc, char* argv[]){
-  int logAng;
+  int logAnd;
   func_t tabFunc[3] ;
   int tabInt[3] ;
 
@@ -16,6 +16,6 @@ int main (int argc, char* argv[]){
   tabInt[2] = 5 ;
   
   logAnd = multif(tabFunc,tabInt,3) ;  
-  fprintf(stdout, "multif a renvoyé : %d\n", sum) ;
+  fprintf(stdout, "multif a renvoyé : %d\n", logAnd) ;
   return EXIT_SUCCESS ;
 }

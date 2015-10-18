@@ -2,7 +2,7 @@
 
 void recfork (func_t f, void *arg, int *acc) {
 
-  if (*acc == RECLEVEL-1){
+  if (*acc == RECLEVEL){
     f(arg) ;
     return ;
   }
@@ -26,7 +26,8 @@ void recfork (func_t f, void *arg, int *acc) {
 
 void forkfork (func_t f, void *arg){
   int acc ;
-
+  acc = 0 ;
+  
   recfork(f, arg, &acc) ;
 
   return ;
