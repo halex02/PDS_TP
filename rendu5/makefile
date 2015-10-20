@@ -5,7 +5,7 @@ CFLAGS += -g
 
 .PHONY= clean re
 
-EXEC=testMultif processusRally
+EXEC=testMultif processusRally processusLook
 
 all : $(EXEC)
 
@@ -18,8 +18,11 @@ power.o : power.c power.h
 forkfork.o : forkfork.c forkfork.h
 	$(CC) $(CFLAGS) -c forkfork.c
 
-processusRally: processusRally.c
+processusRally : processusRally.c
 	$(CC) $(CFLAGS) -o processusRally processusRally.c
+
+processusLook : processusLook.c
+	$(CC) $(CFLAGS) -o processusLook processusLook.c
 
 testMultif : testMultif.c power.o multifourche.o
 	$(CC) $(CFLAGS) -o testMultif testMultif.c power.o multifourche.o  

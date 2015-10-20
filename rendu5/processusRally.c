@@ -6,7 +6,7 @@
 #define TABSIZE 10
 #define COUNTMAX 100000000
 #define ZOMBIE
-#define VERBOSE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
