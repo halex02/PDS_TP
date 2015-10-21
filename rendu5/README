@@ -1,14 +1,18 @@
 PDS - TP5 : Multipass... euh pardon Multifork
 Antoine Canda & Alexandre Houplon
 
-<Tout marche comme sur des roulettes>
+Globalement tout fonctionne.
+L'exercice 5  a posé quelques souçis,
+le temps de comprendre le fonctionnement de fork, mais au final il a été réalisé
+sans trop de difficultés.
+Les exos 7 et 8 ont été réalisés sans difficultés particulières.
+On est allé un peu plus loin que ce qui était demandé sur l'exo7, d'où la présence de macros
+#ifdef VERBOSE dans le code de processusRally.c (ce point a été commenté)
+et de screenshots dans le rendu. 
+
+Seule la toute dernière question de l'exercice 3 n'a pas été traité.
+
 On s'excuse pour la verbosité des commentaires
 et leur absence de sérieux, mais comme ces listing de code
 tiennent lieux de cours à 5 personnes, on préfére y mettre
-un peu d'humour.
-
-(Ce README et les commentaires du TP ont
-été rédigé dans des conditions improbables et désastreuses pour la santé mentale
-(notamment en écoutant Gollum chanter "Let it go") et sous l'influence d'une quantité
-non négligeable de café, et ce en partie dans le but d'aider des camarades de
-promo que le C rebute fortement.)
+un peu d'humour et beaucoup de détails.

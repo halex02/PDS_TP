@@ -46,9 +46,9 @@ int power(int n, int p){
 
 int power2(int p) {
   /*
-    static pour que la variable n'existe que dans le contexte de ces fonctions,
-    comme ça on peut réutiliser le même nom de variable dans chaque fonction.
-    Sans ça je n'ai aucune idée de ce que ça peut faire, sûrement des chocapic.
+    tentative de mettre static pour que la variable n'existe que dans le contexte de ces fonctions,
+    mais ça n'a pas eu l'effet escompté (il faudra que je pense à relire le cours sur les classes 
+    d'allocation), en fait ça marche très bien sans.
    */
   int i = power(2,p) ;
   fprintf(stdout, "2^%d = %d\n", p, i) ;

@@ -1,6 +1,7 @@
 /*
   macros (in)utiles.
-  NB : ne pas définir VERBOSE ou alors revenir voir le résultat d'ici une heure ou deux.
+  NB : ne pas définir VERBOSE ou alors
+  aller boire un café et  revenir voir le résultat d'ici une heure ou deux.
   (voir plus bas les explications)
  */
 #define TABSIZE 10
