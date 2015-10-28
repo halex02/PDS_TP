@@ -44,13 +44,12 @@ char** parseArgv(char* args, int nd){
   res = (char**)malloc((nd+2)*sizeof(char*)) ;
   
   while(args[k] != '\0' && i != (nd+1)){
-    res[i][j]=args[k] ;
-    ++k ;
-    ++j ;
-    
-    if (args[k] == ' '){
+    if(args[k] != ' '){
+      res[i][++j]=args[++k] ;
+    }else{
       res[i++][j]='\0' ;
-      
+      j = 0 ;
+    }
   }
   res[++i] = NULL ;
   return res ;
