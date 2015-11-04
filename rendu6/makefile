@@ -5,15 +5,20 @@ CFLAGS += -g
 
 .PHONY= clean re
 
-EXEC= testCut
+EXEC= stringManipulationTest
 
 all : $(EXEC)
 
-testCut : stringManipulation.o
-	$(CC) $(CFLAGS) -o testCut testCut.c stringManipulation.o
+stringManipulationTest :  stringManipulation.o
+	$(CC) $(CFLAGS) -o stringManipulationTest stringManipulationTest.c stringManipulation.o
+
 
 stringManipulation.o : stringManipulation.c stringManipulation.h
 	$(CC) $(CFLAGS) -c stringManipulation.c
+
+
+commandParser.o : commandParser.h stringManipulation.o
+	$(CC) $(CFLAGS) -c commandParser.c stringManipulation.o
 
 clean :
 	-rm *~ \#*#

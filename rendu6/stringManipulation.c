@@ -1,39 +1,64 @@
 #include "stringManipulation.h"
 
-int getFirstIndex(char c, char *s, size_t t){
-  int i ;
-  for (i = 0 ; i < t ; i++) {
-    if(s[i]==c)
-      return i ;
-  }
-  return -1 ;
-}
-
-int getNumberOfChar(char c, char *s){
+int getNumberOfChar(char c, const char *s){
   int i, cpt ;
 
   i = (cpt = 0) ;
   
   while(s[i] != '\0'){
-    if(s[i++] == 'c')
+    if(s[i++] == c)
       ++cpt ;
   }
-  return i ;
+  return cpt ;
 }
 
-char** cutString(char del, char *s, char **dest){
-  int cpt ;
-  cpt = 0 ;
-  while(s[cpt]!='\0'){
-    if (s[cpt]==del)
-      s[cpt++]='\0' ;
+int getNIndex(char c, const char *s, int n){
+  int i, cpt ;
+  i = (cpt = 0) ;
+
+  while(s[i] != '\0'){
+    if(cpt == n)
+      return i ;
+    if(s[i] == c)
+      ++cpt ;
+    ++i ;
   }
-  return (char**)s ;
+  return -1 ;
 }
 
-int cutString(char del, char *s, char **dest){
+int getFirstIndex(char c, const char *s){
+  return getNIndex(c, s, 1) ;
+}
+
+char** cutString(char delimiter, char *s){
+  int nb_delimiter, i ;
+  char delim[1] ;
+  char **res ;
   
+  nb_delimiter = getNumberOfChar(delimiter, s) ;
+  if (nb_delimiter == 0){
+    perror("cutString : non delimiter was found.\n") ;
+    exit(EXIT_FAILURE) ;
+  }
   
+  res = (char**)malloc((nb_delimiter+2)*sizeof(char*)) ;
+  if(res == NULL){
+    perror("cutString : malloc failed.\n") ;
+    exit(EXIT_FAILURE) ;
+  }
   
-  return EXIT_SUCCESS ;
+  if(s == NULL || s[0] == '\0'){
+    perror("cutString : unable to cut the given string.\n") ;
+    exit(EXIT_FAILURE) ;
+  }
+  
+  delim[0] = delimiter ;
+  
+  res[0] = strtok(s, delim) ;
+  for(i=1 ; i<(nb_delimiter+2) ; i++){
+    res[i] = strtok(NULL, delim) ;
+  }
+
+  /*Enfin on retourne le tableau contenant notre découpage de chaîne.*/
+  return res ;
 }

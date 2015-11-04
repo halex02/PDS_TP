@@ -1,20 +1,21 @@
-#include <string.h>
 #include "boolean.h"
 #include "flag.h"
+#include "stringManipulation.h"
+#include <stdlib.h>
 
 struct command_s{
-  char *command ;
-  char *argv[] ;
+  char *command_f ;
+  char *argv_f[] ;
 } ;
 
 typedef struct command_s *command_t ;
 
-char* getExecutable(char* cmd) ;
+int isACommand(char *opt) ;
 
-char* getArguments(char* cmd) ;
+char* getExecutable(char* cmd, int *index) ;
 
-char** parseArgv(char* args) ;
+char* getArguments(char* cmd, int *index) ;
 
-command_t isACommand(char *opt) ;
+char** parseArgv(char* args, int nd) ;
 
-
+command_t parseCommand(char *cmd, int* index) ;

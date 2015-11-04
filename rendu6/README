@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------
+
+Houplon Alexandre
+Canda Antoine
+04/11/2015
+
+-----------------------------------------------------------------------------------------------------------------
+
+Ce TP n'est pas fini et fonctionnel par perte de temps sur le travail effectué et par stupidité si ce n'est
+arrogance quand au fait d'avoir voulu refaire le parseur au lieu d'utiliser celui fourni. Ce fut un défi
+inéressant notamment car il fut très révélateur de manques au niveau de malloc...
+
+Il y a de nombreuses lignes de code fonctionnelles de manière séparée et un gros travail fait dessus mais le
+tout ne constitue majoritairement en des APIs.
+
+Il manque la partie gestion des processus, la gestion des flags pour le do est faite pour la partie flags courts
+mais pas pour les flags long. Il y a la tentative avortée du parseur.
+
+Désolé pour le rendu final qui en résulte loin de nos attentes initiales personnelles. Il aura au moins eu le
+mérite de nous "ramener sur terre à coup de baffes" et de mettre en lumières des lacunes que l'on ne pensait pas avoir
+et dont on aimerait discuter avec vous.
+
+Merci de votre attention.
