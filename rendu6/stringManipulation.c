@@ -32,7 +32,7 @@ int getFirstIndex(char c, const char *s){
 
 char** cutString(char delimiter, char *s){
   int nb_delimiter, i ;
-  char delim[1] ;
+  char delim[2] ;
   char **res ;
   
   nb_delimiter = getNumberOfChar(delimiter, s) ;
@@ -53,7 +53,7 @@ char** cutString(char delimiter, char *s){
   }
   
   delim[0] = delimiter ;
-  
+  delim[1] = '\0'
   res[0] = strtok(s, delim) ;
   for(i=1 ; i<(nb_delimiter+2) ; i++){
     res[i] = strtok(NULL, delim) ;

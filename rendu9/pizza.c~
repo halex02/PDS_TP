@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define BUFSIZE 4096
+#define COUNTSIZE 8
+
+struct adn_s{
+  const char *adn_f ;
+  const int longueur_f ;
+  /*int segment_f ;*/
+} ;
+
+typedef struct adn_s *adn_t ;
+
+char* charger_adn (char *path){
+  int fd, tot, lu ;
+  void *buf ;
+  assert((fd = open(path, O_RDONLY))!=-1) ;
+  assert((buf = malloc(BUFSIZE*sizeof(char)))!=NULL) ;
+
+  while(!((lu=read(fd, buf, COUNTSIZE))<COUNTSIZE))
+    tot += lu ;
+  
+  (buf+tot) = (void*)'\0'
+  close(fd) ;
+  
+  return (char*)buf ;
+}
+
+adn_t creer_struct_adn(int cut, char* adn){
+  adn_t res ;
+  res->adn_f = adn ;
+  res->
+}
+
+void* compteur_gc_th(void * arg){
+  adn_t and ;
+  adn = (adn_t)arg ;
+  
+  
+  
+}
+
+int main (int argc, char *argv[]){
+  if (argc == 1){
+    perror("donne moi de l'ADN à manger !!!!\n") ;
+    exit(EXIT_FAILURE) ;
+  }
+  
+  
+  
+  return EXIT_SUCCESS ;
+}
